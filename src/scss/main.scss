@@ -1,0 +1,67 @@
+@import "base/fonts.scss";
+@import "base/variables";
+@import "base/mixins";
+@import "libs/hamburgers/hamburgers";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Hyundai Sans Head Office;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: $menu-padding;
+
+    @media (max-width: 1200px) {
+        padding-left: $menu-padding * 2;
+        padding-right: $menu-padding;
+    }
+
+    @media (max-width: 480px) {
+        padding-left: $menu-padding / 2 ;
+        padding-right: $menu-padding / 2;
+    }
+}
+
+
+
+
+/* Blocks */
+@import "blocks/menu";
+@import "blocks/burger";
+@import "blocks/intro";
+@import "blocks/nav";
+@import "blocks/btn";
+@import "blocks/solutions";
+
+
+
+/* Media */
+@import "base/media";
+
+.block3 {
+    height: 500px;
+    background-color: $black;
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 480px) {
+    
+}
+
+@media (max-width: 320px) {
+    
+}

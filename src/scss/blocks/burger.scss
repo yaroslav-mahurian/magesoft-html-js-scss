@@ -1,0 +1,27 @@
+.burger-menu {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+
+
+    transform: rotate(90deg);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+        transform: rotate(0);
+    }
+    
+}
+
+.hamburger-box__text {
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
