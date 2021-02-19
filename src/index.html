@@ -6,14 +6,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
-    <title>Magesoft</title>
+    <title>Magetoolkit</title>
 </head>
 <body>
 
     <!-- Menu -->
     <div class="menu">
         <div class="menu__logo">
-            <img class="menu__logo-img" id="menuLogo" src="./img/logo-black-magesoft.png" alt="logo-magesoft"> 
+            <a href="#intro"><img class="menu__logo-img" id="menuLogo" src="./img/logo-black-magesoft.png" alt="logo-magesoft"></a> 
         </div>
         <div class="burger-menu" id="burgerMenu">
             <button class="hamburger hamburger--spin" id="burgerBtn" type="button">
@@ -25,9 +25,26 @@
         </div>
     </div>
 
+    <!-- Menu wrapper -->
+    <div class="menu-wrapper" id="menuWrapper">
+        <div class="menu-col">
+            <a href="#" class="menu__link"><span>Home</span></a>
+            <a href="#" class="menu__link"><span>Work</span></a>
+            <a href="#" class="menu__link"><span>Portfolio</span></a>
+            <a href="#" class="menu__link"><span>News</span></a>
+            <a href="#" class="menu__link"><span>About</span></a>
+        </div>
+        <div class="menu-col">
+            <a href="#" class="btn btn--menu"><span>SEO</span></a>
+            <a href="#" class="btn btn--menu"><span>Web Development</span></a>
+            <a href="#" class="btn btn--menu"><span>Marketing</span></a>
+            <a href="#" class="btn btn--menu"><span>E-commerce</span></a>
+            <a href="#" class="btn btn--menu"><span>Security</span></a>
+        </div>
+    </div>
 
     <!-- Intro -->
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="intro__logo">
             <img class="intro__logo-img" src="./img/logo-white-magesoft.png" alt="logo-magesoft">
         </div>
@@ -41,12 +58,15 @@
         </nav>
     </div>
 
-    
+    <div class="round-wrapper">
+        <div class="round" id="vlineRound"></div>
+    </div>
+        
+    <!-- Solutions -->
     <section class="solutions">
         <div class="container">
-            <div class="solutions__wrapper">
-
-                <div class="solutions__descr">
+            <div class="vline-wrapper">
+                <div class="vline-descr vline-descr--solutions" id="solutionsDescr">
                     <h2 class="solutions__header">
                         Exclusive Software Development & Business Growth Solutions
                     </h2>
@@ -56,28 +76,153 @@
                         </p>
                     </div>
                 </div>
+                <div class="vline-titles" data-event-title-block>
+                    <h2 class="vline-titles__el vline-titles__el--active">Your Way to Solution</h2>
+                    <h2 class="vline-titles__el" data-scroll-anim-element>Software</h2>
+                    <h2 class="vline-titles__el" data-scroll-anim-element>Web Development</h2>
+                    <h2 class="vline-titles__el" data-scroll-anim-element>Marketing</h2>
+                    <h2 class="vline-titles__el" data-scroll-anim-element>E-commerce</h2>
+                    <h2 class="vline-titles__el" data-scroll-anim-element>Security</h2>
 
-               
-                <div class="solutions__list" id="solutionsList">
-                    <h2 class="solutions__list-el solutions__list-el--active">Your Way to Solution</h2>
-                    <h2 class="solutions__list-el" data-scroll-anim-element>Software</h2>
-                    <h2 class="solutions__list-el" data-scroll-anim-element>Web Development</h2>
-                    <h2 class="solutions__list-el" data-scroll-anim-element>Marketing</h2>
-                    <h2 class="solutions__list-el" data-scroll-anim-element>E-commerce</h2>
-                    <h2 class="solutions__list-el" data-scroll-anim-element>Security</h2>
-
-                    <div class="vline"></div>
-                    <div class="round" id="round"></div>
+                    <div class="vline" id="vline"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Qualities -->
+    <section class="qualities" data-block-color="black">
+        <div class="container">
+            <div class="vline-wrapper">
+                
+                <div class="vline-descr">
+                <h2 class="section-title section-title--qualities">Why you need MageSoft</h2>
+                    <div class="qualities__titles">
+                        <div class="qualities__titles-row">
+                            <div class="qualities__titles-el" data-qualities-header="Personal Approach">
+                                <h2 class="qualities__titles-header">
+                                    Personal Approach
+                                </h2>
+                            </div>
+                            <div class="qualities__titles-el" data-qualities-header="Powerful code">
+                                <h2 class="qualities__titles-header">
+                                    Powerful code
+                                </h2>
+                            </div>   
+                        </div>
+                        
+                        <div class="qualities__titles-row qualities__titles-row--mt">
+                            <div class="qualities__titles-el"
+                            data-qualities-header="Customization">
+                                <h2 class="qualities__titles-header">
+                                    Customization
+                                </h2>
+                            </div>
+                            <div class="qualities__titles-el" data-qualities-header="Documentation">
+                                <h2 class="qualities__titles-header">
+                                    Documentation
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="vline-titles vline-titles--qualities" data-event-title-block>
+                    <h2 class="vline-titles__el vline-titles__el--qualities" data-scroll-anim-element
+                    data-qualities="Personal Approach">
+                        MageSoft is not an ordinary custom software development company, but it also offers professional solutions for any issue your business meets.
+                    </h2>
+                    <h2 class="vline-titles__el vline-titles__el--qualities" data-scroll-anim-element
+                    data-qualities="Powerful code">
+                        Highly skilled developers will implement their experience to bring your project into life.
+                    </h2>
+                    <h2 class="vline-titles__el vline-titles__el--qualities" data-scroll-anim-element
+                    data-qualities="Customization">
+                        Digital marketing will discover new horizons for your business. We do it as well.
+                    </h2>
+                    <h2 class="vline-titles__el vline-titles__el--qualities" data-scroll-anim-element data-qualities="Documentation">
+                        As a result, you will get a stable and customized software solution with a 24/7 support from our team.
+                    </h2>
+                    <div class="vline vline--white vline--top-offset" id="vline"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tagline -->
+    <section class="tagline" data-block-color="white">
+        <div class="container">
+            <div class="vline-wrapper vline-wrapper--tagline">
+                <div class="vline-descr">
+                    <h2 class="section-title section-title--tagline">See how little ideas turned into big projects:</h2>
+                </div>
+                <div class="vline-titles">
+                    <h2 class="vline-titles__el vline-titles__el--tagline" data-scroll-anim-element data-last-anim-elem><span>Based on quality, security and high performance, we transform ideas into successful products.</span>
+                    </h2>
+                    <div class="vline vline--rotate" id="vline"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="block3"></div>
+    <div class="projects">
+        <div class="container">
+            <div class="card-wrapper">
+                <div class="card card--projects">
+                    <img src="img/projects/project-img-1.png" alt="project image" class="card__img">
+                    <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                    <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                    <div class="card__link">
+                        <a href="#" class="btn btn--projects">Marketing</a>
+                    </div>
+                </div>
+                <div class="card card--projects">
+                    <img src="img/projects/project-img-2.png" alt="project image" class="card__img">
+                    <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                    <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                    <div class="card__link">
+                        <a href="#" class="btn btn--projects">SEO</a>
+                    </div>
+                </div>
+                <div class="card card--projects">
+                    <img src="img/projects/project-img-3.png" alt="project image" class="card__img">
+                    <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                    <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                    <div class="card__link">
+                        <a href="#" class="btn btn--projects">Web Development</a>
+                    </div>
+                </div>
+                <div class="card card--projects">
+                    <img src="img/projects/project-img-4.png" alt="project image" class="card__img">
+                    <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                    <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                    <div class="card__link">
+                        <a href="#" class="btn btn--projects">Security</a>
+                    </div>
+                </div>
+            </div>
 
-    <!-- <script src="babelpolyfill.bundle.js"></script> -->
+            <div class="card-pages-wrapper">
+                <div class="card-pages">
+                    <ul class="card-pages__list">
+                        <li class="card-pages__list-el card-pages__list-el--active"><span>1</span></li>
+                        <li class="card-pages__list-el"><span>2</span></li>
+                        <li class="card-pages__list-el"><span>3</span></li>
+                        <li class="card-pages__list-el"><span>...</span></li>
+                        <li class="card-pages__list-el"><span>17</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block">
+
+    </div>
+
+
+    <script src="babelpolyfill.bundle.js"></script>
     <script src="index.bundle.js"></script>
+    
 
 </body>
 </html>

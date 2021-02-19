@@ -26,6 +26,7 @@ module.exports = {
         rules: [
             {
                 test: /\.m?js$/,
+                include: path.resolve(__dirname, './dist'),
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',

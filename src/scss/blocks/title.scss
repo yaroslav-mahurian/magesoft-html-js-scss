@@ -1,0 +1,55 @@
+.section-title {
+    max-width: 614px;
+    font-size: 81px;
+    font-weight: 400;
+    font-family: Hyundai Sans Head Office;
+    line-height: 85px;
+    color: $black;
+
+    &--qualities {
+        color: $blue;
+    }
+
+    @media (max-width: 1279px) {
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    @media (max-width: 999px) {
+        font-size: 50px;
+        line-height: 65px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 40px;
+        line-height: 55px;
+
+        &--qualities {
+            width: 270px;
+                position: absolute;
+                top: 0;
+                right: 20px;
+        }
+
+        &--tagline {
+            padding-top: 45px;
+            margin-top: 35px; 
+        }
+    }
+
+    @media (max-width: 479px) {
+        font-size: 36px;
+        line-height: 44px;
+
+        &--qualities {
+            width: 200px;
+                position: absolute;
+                top: 0;
+                right: 20px;
+        }
+
+        &--tagline {
+            margin-top: 15px; 
+        }
+    }
+}

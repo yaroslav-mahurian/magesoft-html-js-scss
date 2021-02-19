@@ -1,93 +1,174 @@
-/* --------------------------------- BURGER --------------------------------- */ 
 
-const burgerMenu = document.querySelector('#burgerMenu');
-const burgerBtn = document.querySelector('#burgerBtn');
-
-
-burgerMenu.addEventListener("click", () => {
-    burgerBtn.classList.toggle('is-active');
+/*  Smooth scroll script */
+const anchors = document.querySelectorAll('a[href*="#"]');
+Array.from(anchors).forEach((anchor) => {
+	anchor.addEventListener("click", function(e) {
+		e.preventDefault();
+		const blockID = anchor.getAttribute('href');
+		document.querySelector('' + blockID).scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	});
 });
+
+function offset(elem) {
+    // (1)
+    var box = elem.getBoundingClientRect();
+    
+    // (2)
+    var body = document.body;
+    var docElem = document.documentElement;
+    
+    // (3)
+    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
+    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
+    
+    // (4)
+    var clientTop = docElem.clientTop || body.clientTop || 0;
+    var clientLeft = docElem.clientLeft || body.clientLeft || 0;
+    
+    // (5)
+    var top  = box.top +  scrollTop - clientTop;
+    var left = box.left + scrollLeft - clientLeft;
+    
+    return { top: Math.round(top), left: Math.round(left) };
+}
 
 
 /* --------------------------------- SCROLL ACTIONS --------------------------------- */ 
 
 /* Variables */
-const round = document.querySelector("#round");
-const roundDefOffset = offset(round).top;
-const solutionsList = document.querySelector('#solutionsList');
-const menuLogo = document.querySelector('#menuLogo');
+function script() {
+    const vline = document.querySelector("#vline");
+    const vlineRound = document.querySelector("#vlineRound");
+
+    const vlineOffsetLeft = offset(vline).left;
+    const vlineOffsetTop = offset(vline).top;
+    vlineRound.style.left = `${vlineOffsetLeft}px`;
+    vlineRound.style.top = `${(vlineOffsetTop - window.innerHeight) - 10}px`;
+
+    const vlineTitlesBlocks = document.querySelectorAll('[data-event-title-block]');
+    /* const vlineTitlesBlockOffset = offset(vlineTitlesBlock).top; */
+    const lastAnimElem = document.querySelector('[data-last-anim-elem]');
 
 
-let allElemPosArr = [];
-
-// Создаем массив из всех page-element слайдера
-const allElemArr = Array.from(document.querySelectorAll('[data-scroll-anim-element]'));
-
-// Заполняем массив значениями offset каждого page-element
-allElemArr.forEach(function(element) {
-	const ElemPos = offset(element).top;
-		allElemPosArr.push(ElemPos);
-}); 
+    const menuLogo = document.querySelector('#menuLogo');
 
 
-window.addEventListener("scroll", activateScrollActions);
-
-function activateScrollActions() {
-    round.classList.remove('round--transition');
-    const scrolled = window.pageYOffset;
-    const innerHeight = window.innerHeight;
-    const coords = document.documentElement.clientHeight;
 
 
-    if (scrolled >= roundDefOffset - innerHeight / 2) {
-        round.style.transform = `translate3d(-50%, ${scrolled - (roundDefOffset - innerHeight / 2)}px, 0)`;
-    } else {
-        round.style.transform = "translate3d(-50%, 0, 0)";
+    const vlineRoundDefOffset = offset(vlineRound).top;
+
+
+
+
+    qualitiesTitlesArr = Array.from(document.querySelectorAll('[data-qualities-header]'));
+
+
+    let allElemPosArr = [];
+
+    // Создаем массив из всех page-element слайдера
+    const allElemArr = Array.from(document.querySelectorAll('[data-scroll-anim-element]'));
+
+    // Заполняем массив значениями offset каждого page-element
+    allElemArr.forEach(function(element) {
+        const ElemPos = offset(element).top;
+            allElemPosArr.push(ElemPos);
+    }); 
+
+
+    window.addEventListener("scroll", activateScrollActions);
+
+    function activateScrollActions() {
+        
+        vlineRound.classList.remove('round--transition');
+        const scrolled = window.pageYOffset;
+        const innerHeight = window.innerHeight;
+        const coords = document.documentElement.clientHeight;
+        const lastAnimElemOffset = offset(lastAnimElem).top;
+
+
+        if (scrolled > lastAnimElemOffset - innerHeight / 2) {
+            vlineRound.style.transform = `translate3d(-45%, ${lastAnimElemOffset - vlineRoundDefOffset + 7}px, 0)`;
+            vlineRound.style.opacity = "0"; 
+            
+        } else if (scrolled >= vlineRoundDefOffset  - innerHeight / 2) {
+            vlineRound.style.opacity = "1";
+            vlineRound.style.transform = `translate3d(-45%, ${scrolled - (vlineRoundDefOffset - innerHeight / 2)}px, 0)`;
+        } else {
+            vlineRound.style.opacity = "1";
+            vlineRound.style.transform = "translate3d(-45%, 0, 0)";
+        }
+            
+        checkActiveEl();
+
+        if (scrolled > coords) {
+            menuLogo.classList.add('menu__logo-img--active');
+        } else {
+            menuLogo.classList.remove('menu__logo-img--active');
+        }
     }
 
-    checkActiveEl();
+    Array.from(vlineTitlesBlocks).forEach((block) => {
+        block.addEventListener("mouseover", function(e) {
+            if (e.target.hasAttribute("data-scroll-anim-element")) {
+                let currentElOffset = offset(e.target).top;
+                vlineRound.classList.add('round--transition');
+                vlineRound.style.transform = `translate3d(-45%, ${(currentElOffset) - vlineRoundDefOffset}px, 0)`;
+                vlineRound.addEventListener("transitionend", checkActiveEl);
+            }
+        });
+    });
 
-   /*  round.addEventListener("transitionend", checkActiveEl); */
-    if (scrolled > coords) {
-        menuLogo.classList.add('menu__logo-img--active');
-    } else {
-        menuLogo.classList.remove('menu__logo-img--active');
-    }
+
+    function checkActiveEl() {
+        let vlineRoundCurrentOffset = offset(vlineRound).top;
+        const blackBlockOffset = offset(document.querySelector('[data-block-color="black"]')).top;
+        const whiteBlockOffset = offset(document.querySelector('[data-block-color="white"]')).top;
+        
+        allElemArr.forEach((el) => {
+            if (vlineRoundCurrentOffset >= offset(el).top) {
+                el.classList.add("vline-titles__el--active");
+                qualitiesTitlesArr.forEach((title) => {
+                    if (el.dataset.qualities === title.dataset.qualitiesHeader) {
+                        title.classList.add("qualities__titles-el--active");
+                    } else {
+                        title.classList.remove("qualities__titles-el--active");
+                    }
+                });
+            } else {
+                el.classList.remove("vline-titles__el--active");
+            }
+        });
+
+
+    if (vlineRoundCurrentOffset >= blackBlockOffset && vlineRoundCurrentOffset <= whiteBlockOffset) {
+            
+            vlineRound.style.borderColor = "#ffffff";
+            vlineRound.style.backgroundColor = "#000000";
+        } else {
+            vlineRound.style.borderColor = "#000000";
+            vlineRound.style.backgroundColor = "#ffffff";
+        }
+    } 
 }
 
-solutionsList.addEventListener("mouseover", function(e) {
-    if (e.target.hasAttribute("data-scroll-anim-element")) {
-        let currentElOffset = offset(e.target).top;
-        round.classList.add('round--transition');
-        round.style.transform = `translate3d(-50%, ${(currentElOffset + 2) - roundDefOffset}px, 0)`;
-         
-        round.addEventListener("transitionend", checkActiveEl);
-    } /* else {
-        /* const scrolled = window.pageYOffset;
-        const innerHeight = window.innerHeight;
-        round.style.transform = `translate3d(-50%, ${scrolled - (roundDefOffset - innerHeight / 2)}px, 0)`;
-    } */
+setTimeout(script, 200);
+
+/* --------------------------------- BURGER --------------------------------- */ 
+
+const burgerMenu = document.querySelector('#burgerMenu');
+const burgerBtn = document.querySelector('#burgerBtn');
+const menuWrapper = document.querySelector('#menuWrapper');
+
+
+burgerMenu.addEventListener("click", () => {
+    burgerBtn.classList.toggle('is-active');
+    menuWrapper.classList.toggle('menu-wrapper--active');
+
+    if(menuLogo.className != 'menu__logo-img menu__logo-img--active') {
+        menuLogo.classList.add('menu__logo-img--active');
+    }
 });
 
-function removeRoundTransition() {
-    round.classList.remove('round--transition');
-}
-
-function checkActiveEl() {
-    let roundCurrentOffset = offset(round).top;
-    allElemArr.forEach((el) => {
-        if (roundCurrentOffset >= offset(el).top) {
-            el.classList.add("solutions__list-el--active");
-        } else {
-            el.classList.remove("solutions__list-el--active");
-        }
-    });
-} 
-
-// Функция для получения offset элемента от верхней точки страницы
-function offset(el) {
-	const rect = el.getBoundingClientRect(),
-		scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-		scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	return {top: rect.top + scrollTop, left: rect.left + scrollLeft};
-}

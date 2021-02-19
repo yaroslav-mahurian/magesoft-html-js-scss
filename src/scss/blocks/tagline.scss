@@ -1,0 +1,27 @@
+.tagline {
+   /*  margin-top: 35px; */
+    padding-top: 143px;
+    padding-bottom: 107px;
+
+    background-color: $white;
+    overflow: hidden;
+
+    @media (max-width: 1279px) {
+        padding-top: 79px;
+        padding-bottom: 83px;   
+    }
+
+    @media (max-width: 999px) {
+        padding-bottom: 123px;   
+    }
+    
+    @media (max-width: 767px) {
+        padding-top: 45px;
+        padding-bottom: 74px;   
+    }
+
+    @media (max-width: 479px) {
+        padding-top: 45px;
+        padding-bottom: 29px;   
+    }
+}

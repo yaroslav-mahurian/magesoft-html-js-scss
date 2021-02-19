@@ -7,7 +7,13 @@
     box-sizing: border-box;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    color: $white;
     margin: 0;
     font-family: Hyundai Sans Head Office;
 }
@@ -22,43 +28,59 @@ body {
         padding-right: $menu-padding;
     }
 
-    @media (max-width: 480px) {
-        padding-left: $menu-padding / 2 ;
+    @media (max-width: 767px) {
+        padding-left: $menu-padding / 2;
         padding-right: $menu-padding / 2;
     }
+
+    @media (max-width: 479px) {
+        padding-left: $menu-padding / 3;
+        padding-right: $menu-padding / 3;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.block {
+    height: 700px;
+    background-color: $white;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
 }
 
 
 
 
 /* Blocks */
+@import "blocks/title";
 @import "blocks/menu";
 @import "blocks/burger";
 @import "blocks/intro";
 @import "blocks/nav";
 @import "blocks/btn";
 @import "blocks/solutions";
+@import "blocks/vline";
+@import "blocks/qualities";
+@import "blocks/tagline";
+@import "blocks/projects";
+@import "blocks/card";
 
 
-
-/* Media */
-@import "base/media";
-
-.block3 {
-    height: 500px;
-    background-color: $black;
-}
-
-
-@media (max-width: 1200px) {
+@media (max-width: 1279px) {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 999px) {
+
+}
+
+@media (max-width: 767px) {
     
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     
 }
 

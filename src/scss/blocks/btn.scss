@@ -47,7 +47,7 @@
 
     &:hover {
         text-decoration: none;
-        color: inherit;
+        color: $black;
         transition: color 0.3s cubic-bezier(0.37, 0, 0.63, 1);
 
 
@@ -61,7 +61,7 @@
         }
     }
 
-    @media (max-width: 320px) {
+    @media (max-width: 479px) {
         min-width: 161px;
         padding: 10px 42px 10px 67px;
 
@@ -70,6 +70,56 @@
 
         &:before {
             left: 15px;
+        }
+    }
+
+    &--menu {
+        display: inline;
+        padding: 0 20px 0 47px;
+        min-width: 0;
+        
+        &:before {
+            left: 17px;
+        }
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &:hover {
+            color: $black;
+            &:after {
+                background-color: #A4A4A4;
+            }
+        }
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            &:before {
+                transform: translate3d(0, -100%, 0);
+            }
+        }
+
+        @media (max-width: 479px) {
+            font-size: 18px;
+            min-height: 35px;
+
+            &:before {
+                transform: translate3d(0, -50%, 0);
+            }
+        }
+
+    }
+
+    &--projects {
+        @media (max-width: 479px) {
+            font-size: 18px;
+            min-height: 35px;
+
+            &:before {
+                transform: translate3d(0, -50%, 0);
+            }
         }
     }
 }
