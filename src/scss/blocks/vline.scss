@@ -215,6 +215,7 @@
             height: 35px;
             border: 2px solid #000;
             background-color: $blue;
+            transform: translate3d(-45%, 0, 0);
         }
         
     }
@@ -254,6 +255,16 @@
                 transform: translate3d(-40%, 0, 0);
             }
         }
+
+        &--tagline {
+            &:first-child {
+                &:before {
+                    transform: translate3d(-45%, 0, 0);
+                }
+            }
+            
+        }
+
 
         &:before {
             left: -$vline-titles-pl-767;

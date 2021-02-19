@@ -14,6 +14,10 @@
     overflow: hidden;
     z-index: 1;
 
+    & span {
+        vertical-align: -5%;
+    }
+
     &:before {
         content: "";
         display: block;
@@ -44,6 +48,7 @@
         z-index: -1;
             
     }
+    
 
     &:hover {
         text-decoration: none;
@@ -61,6 +66,10 @@
         }
     }
 
+    @media (max-width: 767px) {
+        
+    }
+
     @media (max-width: 479px) {
         min-width: 161px;
         padding: 10px 42px 10px 67px;
@@ -74,7 +83,6 @@
     }
 
     &--menu {
-        display: inline;
         padding: 0 20px 0 47px;
         min-width: 0;
         
@@ -91,14 +99,26 @@
             }
         }
 
+
+        & span {
+            display: inline-block;
+            vertical-align: -10%;
+        }
+        
+        @media (max-width: 999px) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
         @media (max-width: 767px) {
             font-size: 20px;
             margin-top: 5px;
             margin-bottom: 5px;
 
-            &:before {
-                transform: translate3d(0, -100%, 0);
-            }
+            & span {
+            display: inline-block;
+            vertical-align: -15%;
+        }
         }
 
         @media (max-width: 479px) {
@@ -110,6 +130,35 @@
             }
         }
 
+    }
+
+    &--white-dot {
+        padding-top: 0;
+        padding-bottom: 0;
+        &:hover {
+            color: $black;
+            &:after {
+                background-color: #A4A4A4;
+            }
+        }
+        &:before {
+            background-color: $btn-dot-white;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            min-height: 35px; 
+        }
+
+        @media (max-width: 479px) {
+            font-size: 18px;
+
+            &:before {
+                transform: translate3d(0, -50%, 0);
+            }
+        }
     }
 
     &--projects {

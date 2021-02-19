@@ -35,6 +35,18 @@ function offset(elem) {
     return { top: Math.round(top), left: Math.round(left) };
 }
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 
 /* --------------------------------- SCROLL ACTIONS --------------------------------- */ 
 
@@ -47,21 +59,11 @@ function script() {
     const vlineOffsetTop = offset(vline).top;
     vlineRound.style.left = `${vlineOffsetLeft}px`;
     vlineRound.style.top = `${(vlineOffsetTop - window.innerHeight) - 10}px`;
-
     const vlineTitlesBlocks = document.querySelectorAll('[data-event-title-block]');
-    /* const vlineTitlesBlockOffset = offset(vlineTitlesBlock).top; */
-    const lastAnimElem = document.querySelector('[data-last-anim-elem]');
-
-
     const menuLogo = document.querySelector('#menuLogo');
-
-
-
-
     const vlineRoundDefOffset = offset(vlineRound).top;
-
-
-
+    const lastAnimElem = document.querySelector('[data-last-anim-elem]');
+    const lastAnimElemOffset = offset(lastAnimElem).top;
 
     qualitiesTitlesArr = Array.from(document.querySelectorAll('[data-qualities-header]'));
 
@@ -86,14 +88,13 @@ function script() {
         const scrolled = window.pageYOffset;
         const innerHeight = window.innerHeight;
         const coords = document.documentElement.clientHeight;
-        const lastAnimElemOffset = offset(lastAnimElem).top;
 
 
-        if (scrolled > lastAnimElemOffset - innerHeight / 2) {
-            vlineRound.style.transform = `translate3d(-45%, ${lastAnimElemOffset - vlineRoundDefOffset + 7}px, 0)`;
+        if (scrolled >= lastAnimElemOffset - innerHeight / 2) {
+            vlineRound.style.transform = `translate3d(-45%, ${lastAnimElemOffset - vlineRoundDefOffset}px, 0)`;
             vlineRound.style.opacity = "0"; 
             
-        } else if (scrolled >= vlineRoundDefOffset  - innerHeight / 2) {
+        } else if (scrolled >= vlineRoundDefOffset - innerHeight / 2) {
             vlineRound.style.opacity = "1";
             vlineRound.style.transform = `translate3d(-45%, ${scrolled - (vlineRoundDefOffset - innerHeight / 2)}px, 0)`;
         } else {
@@ -144,7 +145,6 @@ function script() {
 
 
     if (vlineRoundCurrentOffset >= blackBlockOffset && vlineRoundCurrentOffset <= whiteBlockOffset) {
-            
             vlineRound.style.borderColor = "#ffffff";
             vlineRound.style.backgroundColor = "#000000";
         } else {
@@ -156,19 +156,29 @@ function script() {
 
 setTimeout(script, 200);
 
-/* --------------------------------- BURGER --------------------------------- */ 
+/* --------------------------------- MENU --------------------------------- */ 
 
 const burgerMenu = document.querySelector('#burgerMenu');
 const burgerBtn = document.querySelector('#burgerBtn');
 const menuWrapper = document.querySelector('#menuWrapper');
+const menuWrapperLogo = document.querySelector('#menuWrapperLogo');
+const closeMenuBtns = document.querySelectorAll("[data-action-close-menu]");
 
 
 burgerMenu.addEventListener("click", () => {
     burgerBtn.classList.toggle('is-active');
     menuWrapper.classList.toggle('menu-wrapper--active');
-
-    if(menuLogo.className != 'menu__logo-img menu__logo-img--active') {
-        menuLogo.classList.add('menu__logo-img--active');
+    if(menuLogo.className === 'menu__logo-img menu__logo-img--active') {
+        menuWrapperLogo.style.opacity = "0";
+    } else {
+        menuWrapperLogo.style.opacity = "1";
     }
+});
+
+Array.from(closeMenuBtns).forEach((btn) => {
+    btn.addEventListener("click", ()=> {
+        burgerBtn.classList.toggle('is-active');
+        menuWrapper.classList.remove('menu-wrapper--active');
+    });
 });
 

@@ -12,7 +12,7 @@
 
     <!-- Menu -->
     <div class="menu">
-        <div class="menu__logo">
+        <div class="menu__logo" data-action-close-menu>
             <a href="#intro"><img class="menu__logo-img" id="menuLogo" src="./img/logo-black-magesoft.png" alt="logo-magesoft"></a> 
         </div>
         <div class="burger-menu" id="burgerMenu">
@@ -27,19 +27,32 @@
 
     <!-- Menu wrapper -->
     <div class="menu-wrapper" id="menuWrapper">
-        <div class="menu-col">
-            <a href="#" class="menu__link"><span>Home</span></a>
-            <a href="#" class="menu__link"><span>Work</span></a>
-            <a href="#" class="menu__link"><span>Portfolio</span></a>
-            <a href="#" class="menu__link"><span>News</span></a>
-            <a href="#" class="menu__link"><span>About</span></a>
+        <div class="menu-wrapper__logo" id="menuWrapperLogo">
+            <a href="#intro" data-action-close-menu><img class="menu-wrapper__logo-img" src="./img/logo-white-magesoft.png" alt="logo-magesoft"></a>
         </div>
-        <div class="menu-col">
-            <a href="#" class="btn btn--menu"><span>SEO</span></a>
-            <a href="#" class="btn btn--menu"><span>Web Development</span></a>
-            <a href="#" class="btn btn--menu"><span>Marketing</span></a>
-            <a href="#" class="btn btn--menu"><span>E-commerce</span></a>
-            <a href="#" class="btn btn--menu"><span>Security</span></a>
+
+        <a class="menu-wrapper__btn" href="#" data-action-close-menu></a>
+        <div class="menu__inner">           
+            <div class="menu-col">
+                <a href="#" class="menu__link"><span>Home</span></a>
+                <a href="#" class="menu__link"><span>Work</span></a>
+                <a href="#" class="menu__link"><span>Portfolio</span></a>
+                <a href="#" class="menu__link"><span>News</span></a>
+                <a href="#" class="menu__link"><span>About</span></a>
+            </div>
+            <div class="menu-col">
+                <a href="#" class="btn btn--menu"><span>Web Development</span></a>
+                <a href="#" class="btn btn--menu"><span>SEO</span></a>
+                <a href="#" class="btn btn--menu"><span>Security</span></a>
+                <a href="#" class="btn btn--menu"><span>Marketing</span></a>
+                <a href="#" class="btn btn--menu"><span>E-commerce</span></a>
+            </div>
+        </div>
+
+        <div class="menu__socials">
+            <a href="#" class="btn btn--white-dot"><span>Linkedin</span></a>
+            <a href="#" class="btn btn--white-dot"><span>Facebook</span></a>
+            <a href="#" class="btn btn--white-dot"><span>Instagram</span></a>
         </div>
     </div>
 
@@ -50,10 +63,26 @@
         </div>
         <nav class="nav nav--intro">
             <ul class="nav__list">
-                <li class="nav__list-elem"><a class="btn" href="#">Services</a></li> 
-                <li class="nav__list-elem"><a class="btn" href="#">Portfolio</a></li>
-                <li class="nav__list-elem"><a class="btn" href="#">News</a></li> 
-                <li class="nav__list-elem"><a class="btn" href="#">About</a></li> 
+                <li class="nav__list-elem">
+                    <a class="btn" href="#">
+                        <span>Services</span>
+                    </a>
+                </li> 
+                <li class="nav__list-elem">
+                    <a class="btn" href="#">
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li class="nav__list-elem">
+                    <a class="btn" href="#">
+                        <span>News</span>
+                    </a>
+                </li> 
+                <li class="nav__list-elem">
+                    <a class="btn" href="#">
+                        <span>About</span>
+                    </a>
+                </li> 
             </ul>    
         </nav>
     </div>
