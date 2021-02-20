@@ -134,12 +134,16 @@
 }
 
 .menu-wrapper__btn {
+    border: none;
+    background-color: transparent;
+
     position: absolute;
     right: 60px;
     top: 60px;
     padding: 20px;
 
     cursor: pointer;
+
 
     &:before {
         content: '';
@@ -154,6 +158,8 @@
         left: 50%;
 
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+
+        transition: width .1s ease-out;
     }
 
     &:after {
@@ -169,6 +175,19 @@
         left: 50%;
 
         transform: translate3d(-50%, -50%, 0) rotate(45deg);
+
+        transition: width .1s ease-out;
+    }
+
+    &:focus {
+        outline: none;
+        &:before {
+            width: 25px;
+        }
+
+        &:after {
+            width: 25px;
+        }
     }
 
     @media (max-width: 767px) {

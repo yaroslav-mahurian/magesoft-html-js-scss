@@ -66,9 +66,6 @@
         }
     }
 
-    @media (max-width: 767px) {
-        
-    }
 
     @media (max-width: 479px) {
         min-width: 161px;
@@ -98,7 +95,6 @@
                 background-color: #A4A4A4;
             }
         }
-
 
         & span {
             display: inline-block;
@@ -142,6 +138,10 @@
             }
         }
         &:before {
+            background-color: $btn-dot-white;
+        }
+
+        &:after {
             background-color: $btn-dot-white;
         }
 

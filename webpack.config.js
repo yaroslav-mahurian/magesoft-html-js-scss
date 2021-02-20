@@ -7,7 +7,7 @@ module.exports = {
         babelpolyfill: '@babel/polyfill',
         index: './src/js/main.js',
     },
-    mode: 'development',
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
