@@ -26,6 +26,33 @@
         top: -190px;
         z-index: -1;
         transform: translate3d(0px, 0px, 0px);
+
+    }
+
+    @media (max-width: 1279px) {
+        &--coop {
+            left: 67.5%;
+        }
+    }
+
+    @media (max-width: 999px) {
+        &--coop {
+            top: -95px;
+            left: 66.8%;
+            z-index: -3;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &--coop {
+            left: 65.5%;
+        }  
+    }
+
+    @media (max-width: 767px) {
+        &--coop {
+            left: 63.5%;
+        }
     }
     
 }

@@ -280,6 +280,10 @@
     &--coop {
         position: static;
         padding: 15px 70px;
+
+        &:before, &:after {
+            display: none;
+        }
     }
 
     &--coop-active {
@@ -526,6 +530,19 @@
         &--all-projects, &--all-news {
             padding: 15px 55px;
         }
+
+        &--coop {
+            position: absolute;
+            
+            top: -20px;
+            bottom: auto;
+            left: 125px;
+
+            &:before, &:after {
+                display: none;
+            }
+        }
+    
     }
 
     @media (max-width: 999px) {
@@ -679,6 +696,10 @@
         &--news {
             bottom: -80px;
             left: 50%;
+        }
+
+        &--coop {
+            bottom: auto;
         }
 
         &--notice {
