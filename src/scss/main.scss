@@ -2,6 +2,7 @@
 @import "base/variables";
 @import "base/mixins";
 @import "libs/hamburgers/hamburgers";
+@import "libs/swiper/swiper";
 
 * {
     box-sizing: border-box;
@@ -37,21 +38,70 @@ body {
         padding-left: $menu-padding / 3;
         padding-right: $menu-padding / 3;
     }
+
+    &--footer {
+        @media (max-width: 1279px) {
+            padding-left: $menu-padding * 1.5;
+            padding-right: $menu-padding / 2;
+        }
+
+        @media (max-width: 767px) {
+            padding-left: $menu-padding / 2;
+            padding-right: $menu-padding / 2;
+        }
+
+        @media (max-width: 479px) {
+            padding-left: $menu-padding / 3;
+            padding-right: $menu-padding / 3;
+        }
+    }
+
+    &--contact {
+        @media (max-width: 999px) {
+            padding-left: $menu-padding / 2;
+            padding-right: $menu-padding / 2;
+        }
+
+        @media (max-width: 479px) {
+            width: 100%;
+            padding-left: $menu-padding / 7;
+            padding-right: $menu-padding / 7;
+
+        }
+    }
+
+    &--one-project {
+        padding-left: $menu-padding;
+        padding-right: $menu-padding / 2;
+
+        @media (max-width: 1279px) {
+            padding-left: $menu-padding * 1.5;
+            padding-right: $menu-padding / 2;
+        }
+
+        @media (max-width: 767px) {
+            padding-left: $menu-padding / 2;
+            padding-right: $menu-padding / 2;
+        }
+    }
+
+    &--all-projects, &--all-news {
+        @media (max-width: 1279px) {
+            padding-left: $menu-padding * 1.5;
+            padding-right: $menu-padding / 2;
+        }
+
+        @media (max-width: 767px) {
+            padding-left: $menu-padding / 2;
+            padding-right: $menu-padding / 2;
+        }
+    }
+    
 }
 
 .no-scroll {
     overflow: hidden;
 }
-
-.block {
-    height: 700px;
-    background-color: $white;
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
-}
-
-
-
 
 /* Blocks */
 @import "blocks/title";
@@ -65,7 +115,20 @@ body {
 @import "blocks/qualities";
 @import "blocks/tagline";
 @import "blocks/projects";
+@import "blocks/coop";
 @import "blocks/card";
+@import "blocks/news";
+@import "blocks/team";
+@import "blocks/notice";
+@import "blocks/clients";
+@import "blocks/footer";
+@import "blocks/contact";
+@import "blocks/contacts";
+@import "blocks/one-project";
+@import "blocks/one-news";
+@import "blocks/section";
+@import "blocks/error404";
+
 
 
 @media (max-width: 1279px) {

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <title>Magetoolkit</title>
+</head>
+<body>
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="menu__logo" data-action-close-menu>
+            <a href="../index.html"><img class="menu__logo-img" id="menuLogo" src="../img/logo-black-magesoft.png" alt="logo-magesoft"></a> 
+        </div>
+        <div class="burger-menu" id="burgerMenu">
+            <button class="hamburger hamburger--spin" id="burgerBtn" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            <span class="hamburger-box__text">Menu</span>
+        </div>
+    </div>
+    
+    <!-- Menu Wrapper -->
+    <div class="menu-wrapper" id="menuWrapper">
+        <div class="menu-wrapper__logo" id="menuWrapperLogo">
+            <a href="../index.html" data-action-close-menu><img class="menu-wrapper__logo-img" src="../img/logo-white-magesoft.png" alt="logo-magesoft"></a>
+        </div>
+
+        <button class="menu-wrapper__btn" data-action-close-menu></button>
+
+        <div class="menu__inner">           
+            <div class="menu-col">
+                <a href="#" class="nav__link nav__link--menu"><span>Home</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>Work</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>Portfolio</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>News</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>About</span></a>
+            </div>
+            <div class="menu-col">
+                <a href="#" class="btn btn--menu"><span>Web Development</span></a>
+                <a href="#" class="btn btn--menu"><span>SEO</span></a>
+                <a href="#" class="btn btn--menu"><span>Security</span></a>
+                <a href="#" class="btn btn--menu"><span>Marketing</span></a>
+                <a href="#" class="btn btn--menu"><span>E-commerce</span></a>
+            </div>
+        </div>
+
+        <div class="menu__socials">
+            <a href="#" class="btn btn--white-dot"><span>Linkedin</span></a>
+            <a href="#" class="btn btn--white-dot"><span>Facebook</span></a>
+            <a href="#" class="btn btn--white-dot"><span>Instagram</span></a>
+        </div>
+    </div>
+
+    <div class="menu-wrapper menu-wrapper--contact" id="contactWrapper">
+        <div class="menu-wrapper__logo menu-wrapper__logo--contact">
+            <a href="../index.html" data-action-close-menu><img class="menu-wrapper__logo-img menu-wrapper__logo-img--contact" src="../img/logo-white-magesoft.png" alt="logo-magesoft"></a>
+        </div>
+        <button class="menu-wrapper__btn menu-wrapper__btn--contact" data-action-close-contact></button>
+        <div class="container container--contact">
+            <h3 class="contact__subtitle">One more step to your goal</h3>
+            <h2 class="contact__title">Contact Us</h2>
+
+            <div class="menu__inner menu__inner--contact">
+                <div class="menu-col menu-col--contact">
+                    <form class="contact-form" action="">
+
+                        <div class="contact-form-input-wrapper">
+                            <input class="contact-form__input contact-form__input--name" type="text" placeholder="Your name">
+                        </div>
+                        <div class="contact-form-input-wrapper">
+                            <input class="contact-form__input contact-form__input--email" type="text" placeholder="Your e-mail">
+                        </div>
+                        <div class="contact-form-input-wrapper">
+                            <input class="contact-form__input contact-form__input--phone" type="text" placeholder="Your phone">
+                        </div>
+                        <div class="contact-form-input-wrapper contact-form-input-wrapper--notes">
+                            <input class="contact-form__input contact-form__input--notes" placeholder="How can we help you?"></input>
+                            <input class="contact-form__input contact-form__input--file" name="file" type="file" id="inputFile">
+                            <label for="inputFile">
+                                <span class="input__file-icon">
+                                    <img src="../img/icons/clip.svg" alt="clip">
+                                </span>
+                            </label>
+                        </div>
+                        <a href="#" class="btn btn--notice btn--submit"><span>Send message</span></a>
+                    </form>
+                </div>
+                <div class="menu-col menu-col--contact menu-col--address">
+                    <div class="menu__socials menu__socials--contact menu__socials--desktop-hidden">
+                        <a href="#" class="btn btn--white-dot btn--contact"><span>Linkedin</span></a>
+                        <a href="#" class="btn btn--white-dot btn--contact"><span>Facebook</span></a>
+                        <a href="#" class="btn btn--white-dot btn--contact"><span>Instagram</span></a>
+                    </div>
+
+                    <div class="contacts">
+                        <h3 class="contacts__title">
+                            Office address:
+                        </h3>
+
+                        <div class="contacts-mobile-col">
+                        <div class="contacts__el">
+                            <adress>
+                                ul.Piłsudskiego 74/320, 50-020, Wrocław
+                            </adress>
+                        </div>
+                        
+                        <div class="contacts__el">
+                            <div class="contacts__phone-title">
+                                European 24/7<span>support line</span>:
+                            </div>
+                            <div class="contacts__phone-number">
+                                <a href="tel:+48226022376" class="footer__contact-phone">+48 226 022 376</a>
+                            </div>
+                        </div>
+
+                        <div class="contacts__el">
+                            <div class="contacts__phone-title">
+                                US 24/7<span>support line</span>:
+                            </div>
+                            <div class="contacts__phone-number">
+                                <a href="tel:+14244071019" class="footer__contact-phone">+1 424 407 1019</a>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="contacts-mobile-col">
+                            <div class="contacts__el">
+                                <a href="mailto:contact@magetoolkit.com" class="footer__contact-email">contact@magetoolkit.com</a> 
+                            </div>
+    
+                            <div class="contacts__el">
+                                Mon-Sat: GMT+2 10:00 AM - 06:00 PM
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__socials menu__socials--contact menu__socials--mobile-hidden">
+                <a href="#" class="btn btn--white-dot btn--contact"><span>Linkedin</span></a>
+                <a href="#" class="btn btn--white-dot btn--contact"><span>Facebook</span></a>
+                <a href="#" class="btn btn--white-dot btn--contact"><span>Instagram</span></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="all-news">
+        <div class="section__inner section__inner--all-news">
+            <div class="container container--all-news">
+
+                <div class="section__header section__header--all-news">
+                    <div class="section__title section__title--all-news">
+                        See more on our news
+                    </div>
+    
+                    <div class="section__filter">
+                        <div class="section__filter-list">
+
+                            <div class="section__filter-list-all section__filter-list-all--all-news section__filter-list-all--active">
+                                <span class="section-filter-list-span--all-news">Show all</span>
+                            </div>
+
+                            <div class="section__filter-list-el-wrapper">
+                                <div class="section__filter-list-el section__filter-list-el--all-news">
+                                    <span class="section-filter-list-el-span--all-news">SEO</span>
+                                </div>
+                                <div class="section__filter-list-el section__filter-list-el--all-news">
+                                    <span class="section-filter-list-el-span--all-news">Web Development</span>
+                                </div>
+                                <div class="section__filter-list-el section__filter-list-el--all-news">
+                                    <span class="section-filter-list-el-span--all-news">Marketing</span>
+                                </div>
+                                <div class="section__filter-list-el section__filter-list-el--all-news">
+                                    <span class="section-filter-list-el-span--all-news">E-commerce</span>
+                                </div>
+                                <div class="section__filter-list-el section__filter-list-el--all-news">
+                                    <span class="section-filter-list-el-span--all-news">Security</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> 
+    
+                <div class="section__desc section__desc--all-news">
+                    Creativity, Experience, Understanding
+                    Importantly, while we are focused on E-commerce related Marketing (Google Ads, Facebook/Instagram Ads), our marketologists are also happy to help with your external projects by making professional videos, photos, and creating content for your website.
+                </div>
+    
+                <div class="card-wrapper card-wrapper--all-news">
+                    <div class="card card--projects">
+                        <img src="../img/projects/project-img-1.png" alt="project image" class="card__img">
+                        <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                        <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                        <div class="card__link">
+                            <a href="#" class="btn btn--projects btn--allnews-card"><span>Marketing</span></a>
+                        </div>
+                    </div>
+                    <div class="card card--projects">
+                        <img src="../img/projects/project-img-2.png" alt="project image" class="card__img">
+                        <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                        <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                        <div class="card__link">
+                            <a href="#" class="btn btn--projects btn--allnews-card"><span>SEO</span></a>
+                        </div>
+                    </div>
+                    <div class="card card--projects">
+                        <img src="../img/projects/project-img-3.png" alt="project image" class="card__img">
+                        <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                        <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                        <div class="card__link">
+                            <a href="#" class="btn btn--projects btn--allnews-card"><span>Web Development</span> </a>
+                        </div>
+                    </div>
+                    <div class="card card--projects">
+                        <img src="../img/projects/project-img-4.png" alt="project image" class="card__img">
+                        <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                        <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                        <div class="card__link">
+                            <a href="#" class="btn btn--projects btn--allnews-card"><span>Security</span></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card-pages-wrapper">
+                    <div class="card-pages">
+                        <ul class="card-pages__list card-pages__list--all-news">
+                            <li class="card-pages__list-el card-pages__list-el--all-news card-pages__list-el--active"><span>1</span></li>
+                            <li class="card-pages__list-el card-pages__list-el--all-news"><span>2</span></li>
+                            <li class="card-pages__list-el card-pages__list-el--all-news"><span>3</span></li>
+                            <li class="card-pages__list-el card-pages__list-el--all-news"><span>...</span></li>
+                            <li class="card-pages__list-el card-pages__list-el--all-news"><span>17</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- ./container -->
+        </div>
+
+        <div class="section-footer section-footer--all-news">
+            <div class="container container--all-news">
+
+                <div class="section-footer-wrapper">
+                    <div class="section-footer__col">
+                        <div class="section-footer__logo">
+                            <a href="../index.html">
+                                <img class="section-footer__logo-img" src="../img/logo-white-magesoft.png" alt="magetoolkit-logo">
+                            </a>
+                        </div>
+    
+                        <h2 class="notice__title notice__title--all-news">
+                            Discover what`s possible.
+                            Let`s talk.
+                        </h2>
+    
+                        <a href="#" class="btn btn--notice btn--all-news" data-link-contact><span>Get in touch</span></a>
+    
+    
+                        <div class="menu__socials menu__socials--all-news">
+                            <a href="#" class="btn btn--white-dot btn--contact btn--one-project-social btn--one-news-social btn--all-news-social"><span>Linkedin</span></a>
+                            <a href="#" class="btn btn--white-dot btn--contact btn--one-project-social btn--one-news-social btn--all-news-social"><span>Facebook</span></a>
+                            <a href="#" class="btn btn--white-dot btn--contact btn--one-project-social btn--one-news-social btn--all-news-social"><span>Instagram</span></a>
+                        </div>
+                    </div>
+    
+                    <div class="section-footer__col">
+                        <div class="contacts contacts--all-news">
+                            <h3 class="contacts__title contacts__title--all-news">
+                                Office address:
+                            </h3>
+    
+                            <div class="contacts-mobile-col">
+                            <div class="contacts__el">
+                                <adress>
+                                    ul.Piłsudskiego 74/320, 50-020, Wrocław
+                                </adress>
+                            </div>
+                            
+                            <div class="contacts__el">
+                                <div class="contacts__phone-title">
+                                    European 24/7<span>support line</span>:
+                                </div>
+                                <div class="contacts__phone-number">
+                                    <a href="tel:+48226022376" class="footer__contact-phone">+48 226 022 376</a>
+                                </div>
+                            </div>
+    
+                            <div class="contacts__el">
+                                <div class="contacts__phone-title">
+                                    US 24/7<span>support line</span>:
+                                </div>
+                                <div class="contacts__phone-number">
+                                    <a href="tel:+14244071019" class="footer__contact-phone">+1 424 407 1019</a>
+                                </div>
+                            </div>
+    
+                            </div>
+    
+                            <div class="contacts-mobile-col">
+                                <div class="contacts__el">
+                                    <a href="mailto:contact@magetoolkit.com" class="footer__contact-email">contact@magetoolkit.com</a> 
+                                </div>
+        
+                                <div class="contacts__el">
+                                    Mon-Sat: GMT+2 10:00 AM - 06:00 PM
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+            </div> <!-- ./container -->
+        </div>
+    </section>
+
+    <script src="../babelpolyfill.bundle.js"></script>
+    <script src="../index.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.one-news {
+    background-color: $white;
+    color: $black;
+}
+
+.one-news__footer {
+    margin-top: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 999px) {
+        flex-direction: column;
+    }
+}

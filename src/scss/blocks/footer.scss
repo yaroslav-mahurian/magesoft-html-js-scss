@@ -1,0 +1,199 @@
+.footer {
+    padding-top: 74px;
+    padding-bottom: 96px;
+
+    background-color: $black;
+    color: $white;
+    font-weight: 300;
+
+    @media (max-width: 1279px) {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    @media (max-width: 999px) {
+        padding-top: 67px;
+        padding-bottom: 20px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 29px;
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 479px) {
+        padding-top: 52px;
+        padding-bottom: 73px;
+    }
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 479px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer__logo-img {
+    width: 50px;
+}
+
+.footer__socials {
+    display: none;
+
+    @media (max-width: 479px) {
+        margin-top: 32px;
+        max-width: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer__tagline {
+    max-width: 207px;
+    margin-top: 32px;
+
+    font-family: Hyundai Sans Head Office;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 120%;
+
+    @media (max-width: 1279px) {
+        max-width: 259px;
+        margin-top: 42px;
+    }
+
+    @media (max-width: 999px) {
+        max-width: 192px;
+    }
+    
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.footer__contact {
+    margin-top: 67px;
+
+    @media (max-width: 767px) {
+        margin-top: 45px;
+    }
+
+
+    & a {
+        color: $white;
+    }
+}
+
+.footer__contact-phone {
+    display: block;
+}
+
+.footer__news {
+    max-width: 251px;
+
+    @media (max-width: 1279px) {
+        display: none;
+    }
+}
+
+.footer__news-title {
+    margin-bottom: 40px;
+
+    font-size: 21px;
+    line-height: 130%;
+    font-weight: 400;
+}
+
+.footer__news-el {
+    margin-bottom: 5px;
+    display: block;
+    color: $white;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 120%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.footer__title {
+    margin-bottom: 35px;
+
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 400;
+
+    &--hours {
+        margin-bottom: 45px;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1279px) {
+        align-items: center;
+    }
+}
+
+.nav__link {
+    &--footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 120%;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer-col {
+    &--hours {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &--nav {
+        @media (max-width: 479px) {
+            display: none;
+        }
+    }
+}
+
+.footer__info {
+    max-width: 248px;
+}
+
+.footer__hours {
+    margin-top: 40px;
+
+    &--mobile {
+        display: none;
+
+        @media (max-width: 767px) {
+            max-width: 187px;
+            margin-top: 25px;
+            display: block;
+        }
+    }
+}
+
+.footer__hours-row {
+    margin-bottom: 0;
+}
+

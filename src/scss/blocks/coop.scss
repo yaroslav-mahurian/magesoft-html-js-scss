@@ -1,0 +1,163 @@
+.coop {
+    margin-top: 179px;
+
+    @media (max-width: 1279px) {
+        margin-top: 168px;
+    }
+    
+    @media (max-width: 999px) {
+        margin-top: 183px;
+    }
+    
+    @media (max-width: 767px) {
+        margin-top: 136px;
+    }
+    
+    @media (max-width: 479px) {
+        margin-top: 160px;
+    }
+}
+
+.coop-list {
+    padding-top: 157px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coop-list__el {
+    margin-top: 70px;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    padding: 15px;
+    padding-right: 70px;
+
+    border: 3px solid transparent;
+    border-radius: 62px;
+    background-color: $black;
+
+    position: relative;
+
+    &:first-child {
+        margin-top: 0px;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 185px;
+
+            background-color: $black;
+
+            position: absolute;
+            top: 0;
+            left: 90%;
+            z-index: -2;
+
+            transform-origin: 50% 0 0;
+            transform: translate3d(-50%, 0, 0) rotate(180deg);
+
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 35px;
+
+            background-color: $blue;
+            border-radius: 50%;
+            border: 2px solid #000;
+
+            position: absolute;
+            left: 90%;
+            top: -190px;
+
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        align-self: flex-end;
+        padding-right: 15px;
+        padding-left: 70px;
+    }
+
+    &--active {
+        background-color: $white;
+        border: 3px solid $black;
+        transition: all .3s ease-out;
+
+        .coop-list__el-number {
+            background-color: $black;
+            color: $white;
+        }
+
+        .coop-list__el-text {
+            color: $black;
+        }
+
+    }
+}
+
+.coop-list__el-number {
+    width: 100px;
+    height: 100px;
+
+    background-color: $white;
+    color: $black;
+    border-radius: 50%;
+    border: 6px solid $blue;
+    position: relative;
+
+    & span {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.coop-list__el-text {
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1;
+
+    font-family: Hyundai Sans Head Office;
+    font-weight: 400;
+    font-size: 25px;
+    color: $white;
+}
+
+.svg-coop {
+    position: absolute;
+
+    &--odd {
+        left: 100%;
+        top: 50%;
+        z-index: -2;
+    }
+
+    &--even {
+        right: 95%;
+        top: 50%;
+        z-index: -2;
+    }
+}
+
+.coop__btn-wrapper {
+    margin-top: 70px;
+    align-self: flex-end;
+}
+
+.coop-line-wrapper {
+    position: relative;
+}
+

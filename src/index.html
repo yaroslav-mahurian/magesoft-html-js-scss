@@ -13,7 +13,7 @@
     <!-- Menu -->
     <div class="menu">
         <div class="menu__logo" data-action-close-menu>
-            <a href="#intro"><img class="menu__logo-img" id="menuLogo" src="./img/logo-black-magesoft.png" alt="logo-magesoft"></a> 
+            <a href="#intro" data-smooth-scroll><img class="menu__logo-img" id="menuLogo" src="./img/logo-black-magesoft.png" alt="logo-magesoft"></a> 
         </div>
         <div class="burger-menu" id="burgerMenu">
             <button class="hamburger hamburger--spin" id="burgerBtn" type="button">
@@ -28,18 +28,18 @@
     <!-- Menu wrapper -->
     <div class="menu-wrapper" id="menuWrapper">
         <div class="menu-wrapper__logo" id="menuWrapperLogo">
-            <a href="#intro" data-action-close-menu><img class="menu-wrapper__logo-img" src="./img/logo-white-magesoft.png" alt="logo-magesoft"></a>
+            <a href="#intro" data-action-close-menu data-smooth-scroll><img class="menu-wrapper__logo-img" src="../img/logo-white-magesoft.png" alt="logo-magesoft"></a>
         </div>
 
         <button class="menu-wrapper__btn" data-action-close-menu></button>
 
         <div class="menu__inner">           
             <div class="menu-col">
-                <a href="#" class="menu__link"><span>Home</span></a>
-                <a href="#" class="menu__link"><span>Work</span></a>
-                <a href="#" class="menu__link"><span>Portfolio</span></a>
-                <a href="#" class="menu__link"><span>News</span></a>
-                <a href="#" class="menu__link"><span>About</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>Home</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>Work</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>Portfolio</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>News</span></a>
+                <a href="#" class="nav__link nav__link--menu"><span>About</span></a>
             </div>
             <div class="menu-col">
                 <a href="#" class="btn btn--menu"><span>Web Development</span></a>
@@ -54,6 +54,101 @@
             <a href="#" class="btn btn--white-dot"><span>Linkedin</span></a>
             <a href="#" class="btn btn--white-dot"><span>Facebook</span></a>
             <a href="#" class="btn btn--white-dot"><span>Instagram</span></a>
+        </div>
+    </div>
+
+    <div class="menu-wrapper menu-wrapper--contact" id="contactWrapper">
+        <div class="menu-wrapper__logo menu-wrapper__logo--contact">
+            <a href="#intro" data-action-close-menu data-smooth-scroll><img class="menu-wrapper__logo-img menu-wrapper__logo-img--contact" src="./img/logo-white-magesoft.png" alt="logo-magesoft"></a>
+        </div>
+        <button class="menu-wrapper__btn menu-wrapper__btn--contact" data-action-close-contact></button>
+        <div class="container container--contact">
+            <h3 class="contact__subtitle">One more step to your goal</h3>
+            <h2 class="contact__title">Contact Us</h2>
+
+            <div class="menu__inner menu__inner--contact">
+                <div class="menu-col menu-col--contact">
+                    <form class="contact-form" action="">
+
+                        <div class="contact-form-input-wrapper">
+                            <input class="contact-form__input contact-form__input--name" type="text" placeholder="Your name">
+                        </div>
+                        <div class="contact-form-input-wrapper">
+                            <input class="contact-form__input contact-form__input--email" type="text" placeholder="Your e-mail">
+                        </div>
+                        <div class="contact-form-input-wrapper">
+                            <input class="contact-form__input contact-form__input--phone" type="text" placeholder="Your phone">
+                        </div>
+                        <div class="contact-form-input-wrapper contact-form-input-wrapper--notes">
+                            <input class="contact-form__input contact-form__input--notes" placeholder="How can we help you?"></input>
+                            <input class="contact-form__input contact-form__input--file" name="file" type="file" id="inputFile">
+                            <label for="inputFile">
+                                <span class="input__file-icon">
+                                    <img src="./img/icons/clip.svg" alt="clip">
+                                </span>
+                            </label>
+                        </div>
+                        <a href="#" class="btn btn--notice btn--submit"><span>Send message</span></a>
+                    </form>
+                </div>
+                <div class="menu-col menu-col--contact menu-col--address">
+                    <div class="menu__socials menu__socials--contact menu__socials--desktop-hidden">
+                        <a href="#" class="btn btn--white-dot btn--contact"><span>Linkedin</span></a>
+                        <a href="#" class="btn btn--white-dot btn--contact"><span>Facebook</span></a>
+                        <a href="#" class="btn btn--white-dot btn--contact"><span>Instagram</span></a>
+                    </div>
+
+                    <div class="contacts">
+                        <h3 class="contacts__title">
+                            Office address:
+                        </h3>
+
+                        <div class="contacts-mobile-col">
+                        <div class="contacts__el">
+                            <adress>
+                                ul.Piłsudskiego 74/320, 50-020, Wrocław
+                            </adress>
+                        </div>
+                        
+                        <div class="contacts__el">
+                            <div class="contacts__phone-title">
+                                European 24/7<span>support line</span>:
+                            </div>
+                            <div class="contacts__phone-number">
+                                <a href="tel:+48226022376" class="footer__contact-phone">+48 226 022 376</a>
+                            </div>
+                        </div>
+
+                        <div class="contacts__el">
+                            <div class="contacts__phone-title">
+                                US 24/7<span>support line</span>:
+                            </div>
+                            <div class="contacts__phone-number">
+                                <a href="tel:+14244071019" class="footer__contact-phone">+1 424 407 1019</a>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="contacts-mobile-col">
+                            <div class="contacts__el">
+                                <a href="mailto:contact@magetoolkit.com" class="footer__contact-email">contact@magetoolkit.com</a> 
+                            </div>
+    
+                            <div class="contacts__el">
+                                Mon-Sat: GMT+2 10:00 AM - 06:00 PM
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__socials menu__socials--contact menu__socials--mobile-hidden">
+                <a href="#" class="btn btn--white-dot btn--contact"><span>Linkedin</span></a>
+                <a href="#" class="btn btn--white-dot btn--contact"><span>Facebook</span></a>
+                <a href="#" class="btn btn--white-dot btn--contact"><span>Instagram</span></a>
+            </div>
         </div>
     </div>
 
@@ -201,7 +296,7 @@
                     <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
                     <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
                     <div class="card__link">
-                        <a href="#" class="btn btn--projects">Marketing</a>
+                        <a href="#" class="btn btn--projects"><span>Marketing</span></a>
                     </div>
                 </div>
                 <div class="card card--projects">
@@ -209,7 +304,7 @@
                     <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
                     <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
                     <div class="card__link">
-                        <a href="#" class="btn btn--projects">SEO</a>
+                        <a href="#" class="btn btn--projects"><span>SEO</span></a>
                     </div>
                 </div>
                 <div class="card card--projects">
@@ -217,7 +312,7 @@
                     <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
                     <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
                     <div class="card__link">
-                        <a href="#" class="btn btn--projects">Web Development</a>
+                        <a href="#" class="btn btn--projects"><span>Web Development</span> </a>
                     </div>
                 </div>
                 <div class="card card--projects">
@@ -225,7 +320,7 @@
                     <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
                     <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
                     <div class="card__link">
-                        <a href="#" class="btn btn--projects">Security</a>
+                        <a href="#" class="btn btn--projects"><span>Security</span></a>
                     </div>
                 </div>
             </div>
@@ -242,12 +337,397 @@
                 </div>
             </div>
         </div>
+        <a href="./html-blocks/all-projects.html" class="btn btn--news btn--projects-main"><span>View all projects</span></a>
     </div>
 
+    <!-- Line coop -->
+    <div class="coop">
+        <div class="container">
+            
+            <div class="vline-wrapper vline-wrapper--coop">
+                <div class="vline-descr">
+                    <h2 class="section-title section-title--tagline">Cooperation process
+                        step-by-step</h2>
+                </div>
+                <div class="vline-titles">
+                    <h2 class="vline-titles__el vline-titles__el--tagline vline-titles__el--coop"><span>If you are looking for professional IT outsourcing services, MageSoft is a perfect place to start</span>
+                    </h2>
+                </div>
+            </div>
 
-    <div class="block">
+            <div class="coop-list">
 
+                <div class="coop-list__el" data-coop-anim-elem>
+                    <div class="coop-list__el-number"><span>1</span></div>
+                    <div class="coop-list__el-text">Receiving your 
+                    requirements for the project
+                    </div>
+                    <div class="svg-coop svg-coop--odd">
+                        <svg width="268" height="138" viewBox="0 0 268 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1C0 1 191.895 1 268 1" stroke="black" stroke-width="2"/>
+                            <path d="M267 0L267 138" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="round round--coop" id="lineCoopRound"></div>
+                </div>
+
+                <div class="coop-list__el" data-coop-anim-elem>
+                    <div class="coop-list__el-number"><span>2</span></div>
+                    <div class="coop-list__el-text">Preparing a technical task with the estimate
+                    </div>
+                    <div class="svg-coop svg-coop--even">
+                        <svg width="174" height="151" viewBox="0 0 174 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 151L0.999999 0.999995" stroke="black" stroke-width="2"/>
+                            <path d="M0 1H174" stroke="black" stroke-width="2"/>
+                            </svg>
+                                    
+                    </div>
+                </div>
+
+                <div class="coop-list__el" data-coop-anim-elem>
+                    <div class="coop-list__el-number"><span>3</span></div>
+                    <div class="coop-list__el-text">Accepting the task and signing the contract
+                    </div>
+                    <div class="svg-coop svg-coop--odd">
+                        <svg width="268" height="138" viewBox="0 0 268 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1C0 1 191.895 1 268 1" stroke="black" stroke-width="2"/>
+                            <path d="M267 0L267 138" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="coop-list__el" data-coop-anim-elem>
+                    <div class="coop-list__el-number"><span>4</span></div>
+                    <div class="coop-list__el-text">Completing the task (development & testing the software)
+                    </div>
+                    <div class="svg-coop svg-coop--even">
+                        <svg width="174" height="151" viewBox="0 0 174 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 151L0.999999 0.999995" stroke="black" stroke-width="2"/>
+                            <path d="M0 1H174" stroke="black" stroke-width="2"/>
+                        </svg>                                
+                    </div>
+                </div>
+
+                <div class="coop-list__el" data-coop-anim-elem>
+                    <div class="coop-list__el-number"><span>5</span></div>
+                    <div class="coop-list__el-text">Sending the completed project to you
+                    </div>
+                    <div class="svg-coop svg-coop--odd">
+                        <svg width="292" height="120" viewBox="0 0 292 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M291 2L0.999985 1" stroke="black" stroke-width="2"/>
+                            <path d="M290 2L290 120" stroke="black" stroke-width="2"/>
+                            </svg>                                
+                    </div>
+                </div>
+
+                <div class="coop__btn-wrapper"><a href="#" class="btn btn--news btn--coop" data-link-contact data-coop-anim-elem><span>Let's start</span></a></div>
+            </div>           
+
+        </div>
     </div>
+
+    <section class="news">
+            <div class="news__header">
+                <div class="container"><h2 class="section-title section-title--news">What’s New In The World Of IT?</h2></div>
+                
+            </div>
+            <div class="news__content">
+                <div class="round-static round-static--news"></div>
+                <div class="container">
+                    <div class="card-wrapper">
+                        <div class="card card--projects">
+                            <img src="img/news/news-img-1.png" alt="news image" class="card__img">
+                            <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                            <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                            <div class="card__link">
+                                <a href="#" class="btn btn--projects"><span>Web Development</span></a>
+                            </div>
+                        </div>
+                        <div class="card card--projects">
+                            <img src="img/news/news-img-2.png" alt="news image" class="card__img">
+                            <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                            <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                            <div class="card__link">
+                                <a href="#" class="btn btn--projects"><span>Security</span></a>
+                            </div>
+                        </div>
+                        <div class="card card--projects">
+                            <img src="img/news/news-img-3.png" alt="news image" class="card__img">
+                            <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                            <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                            <div class="card__link">
+                                <a href="#" class="btn btn--projects"><span>Marketing</span></a>
+                            </div>
+                        </div>
+                        <div class="card card--projects">
+                            <img src="img/news/news-img-4.png" alt="news image" class="card__img">
+                            <h3 class="card__title">In What Ways Can AR And VR Be Useful For Selling Your Products?</h3>
+                            <div class="card__desc">Truly successful content is a combination of modern art, latest technology, and incredible creativity.</div>
+                            <div class="card__link">
+                                <a href="#" class="btn btn--projects"><span>SEO</span></a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card-pages-wrapper card-pages-wrapper--news">
+                        <div class="card-pages">
+                            <ul class="card-pages__list">
+                                <li class="card-pages__list-el card-pages__list-el--active"><span>1</span></li>
+                                <li class="card-pages__list-el"><span>2</span></li>
+                                <li class="card-pages__list-el"><span>3</span></li>
+                                <li class="card-pages__list-el"><span>...</span></li>
+                                <li class="card-pages__list-el"><span>17</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="./html-blocks/all-news.html" class="btn btn--news"><span>View all news</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        
+        <div class="container">
+            <h2 class="section-title section-title--team">Meet Our Experts</h2>
+            <div class="team__subtitle">
+                MageSoft representative team is ready to battle through the 
+                whole process of working on your project. 
+                It’s them who hide behind e-mails you receive from us :)
+            </div>
+
+            <div class="swiper-container team-slider-container" id="teamSlider">
+
+                <div class="team-slider-wrapper">
+                  <div class="team-slide">
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="./img/team/team-photo-1.png" alt="team-photo" class="team-card__photo-img">
+                            </div>
+                            <div class="team-card__info">
+                                <h2 class="team-card__name">
+                                    Eduard Karnaukh
+                                </h2>
+                                <h3 class="team-card__post">CEO</h3>
+                                <div class="team-card__desc">Web development genius and dedicated traveler</div>
+                                <div class="team-card__socials">
+                                    <a href="#" class="btn btn--team"><span>Linkedin</span></a>
+                                    <a href="#" class="btn btn--team"><span>Facebook</span></a>
+                                    <a href="#" class="btn btn--team"><span>Instagram</span></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                  </div>
+                  <div class="team-slide">
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="./img/team/team-photo-2.png" alt="team-photo" class="team-card__photo-img">
+                            </div>
+                            <div class="team-card__info">
+                                <h2 class="team-card__name">
+                                    Ivan Gavruk
+                                </h2>
+                                <h3 class="team-card__post">Chief Sales Officer</h3>
+                                <div class="team-card__desc">Charming salesman and passionate musician</div>
+                                <div class="team-card__socials">
+                                    <a href="#" class="btn btn--team"><span>Linkedin</span></a>
+                                    <a href="#" class="btn btn--team"><span>Facebook</span></a>
+                                    <a href="#" class="btn btn--team"><span>Instagram</span></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                  </div>
+                  <div class="team-slide">
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="./img/team/team-photo-3.png" alt="team-photo" class="team-card__photo-img">
+                            </div>
+                            <div class="team-card__info">
+                                <h2 class="team-card__name">
+                                    Jan Szauczuk
+                                </h2>
+                                <h3 class="team-card__post">Director of Projects & Marketing</h3>
+                                <div class="team-card__desc">Unique marketing and petrolhead dreamer</div>
+                                <div class="team-card__socials">
+                                    <a href="#" class="btn btn--team"><span>Linkedin</span></a>
+                                    <a href="#" class="btn btn--team"><span>Facebook</span></a>
+                                    <a href="#" class="btn btn--team"><span>Instagram</span></a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                  </div>
+                </div> 
+
+                <div class="team-slider-pagination">
+                    <div class="team-slider-pagination-el"></div>
+                    <div class="team-slider-pagination-el"></div>
+                    <div class="team-slider-pagination-el"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="notice">
+            <div class="round-static round-static--notice"></div>
+            <div class="notice-wrapper">
+                <h2 class="notice__title">Discover what`s possible.
+                    Let`s talk.</h2>
+                <a href="#" class="btn btn--notice" data-link-contact><span>Get in touch</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="container">
+            <h2 class="section-title section-title--clients">
+                Our Clients
+            </h2>
+        </div>
+
+        <div class="clients-wrapper">
+            <div class="container">
+                <div class="swiper-container clients-slider-container" id="clientsSlider">
+                    <div class="clients-slider-wrapper">
+                        
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/performia.png" alt="performia">
+                            </a>
+                        </div>
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/pipal.png" alt="pipal">
+                            </a>
+                        </div>
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/agricole.png" alt="agricole">
+                            </a>
+                        </div>
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/tehstroy.png" alt="tehstroy">
+                            </a>
+                        </div>
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/white-sharks.png" alt="white-sharks">
+                            </a>
+                        </div>
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/pipal.png" alt="pipal">
+                            </a>
+                        </div>
+                        
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/tehstroy.png" alt="tehstroy">
+                            </a>
+                        </div>
+
+                        <div class="clients-slide">
+                            <a href="#">
+                                <img class="clients-slide__img" src="./img/clients/performia.png" alt="performia">
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container container--footer">
+            <div class="footer-wrapper">
+                <div class="footer-col">
+                    <a href="#intro" class="footer__logo" data-smooth-scroll><img src="./img/logo-white-magesoft.png" alt="magesoft-logo" class="footer__logo-img" data-smooth-scroll></a>
+
+                    <div class="notice notice--footer">
+                        <div class="round-static round-static--notice"></div>
+                        <div class="notice-wrapper">
+                            <h2 class="notice__title">Discover what`s possible.
+                                Let`s talk.</h2>
+                            <a href="#" class="btn btn--notice btn--footer" data-link-contact><span>Get in touch</span></a>
+                        </div>
+                    </div>
+
+                    <div class="footer__socials">
+                        <a href="#" class="btn btn--white-dot"><span>Linkedin</span></a>
+                        <a href="#" class="btn btn--white-dot"><span>Facebook</span></a>
+                        <a href="#" class="btn btn--white-dot"><span>Instagram</span></a>
+                    </div>
+
+                    <div class="footer__tagline">
+                        Just share your idea with us, 
+                        and we will do the rest for you.
+                        That’s why we are 
+                        MageSoft - we do magic.
+                    </div>
+                    <div class="footer__contact">
+                        <a href="tel:+48226022376" class="footer__contact-phone">+48 226 022 376</a>
+                    <a href="tel:+14244071019" class="footer__contact-phone">+1 424 407 1019</a>
+                    <a href="mailto:contact@magetoolkit.com" class="footer__contact-email">contact@magetoolkit.com</a> 
+                    </div>
+                    <div class="footer__hours footer__hours--mobile">
+                        <p class="footer__hours-row">Mon-Sat: 10.00 AM - 06.00 PM</p>
+                        <p class="footer__hours-row">Sun: 24/7 support available</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer__news">
+                        <div class="footer__news-title">
+                            Latest News
+                        </div>
+                        <a href="#" class="footer__news-el">
+                            What You Need To Know About AR Before You Use It
+                        </a>
+                        <a href="#" class="footer__news-el">
+                            In What Ways Can AR and VR Be Useful For Selling Your Products?
+                        </a>
+                        <a href="#" class="footer__news-el">
+                            The Power of AR and VR For Your Business
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col footer-col--nav">
+                    <div class="footer__title">
+                        Our Services
+                    </div>
+                    <div class="footer__nav">
+                        <a href="#" class="nav__link nav__link--footer"><span>Home</span></a>
+                        <a href="#" class="nav__link nav__link--footer"><span>Work</span></a>
+                        <a href="#" class="nav__link nav__link--footer"><span>Portfolio</span></a>
+                        <a href="#" class="nav__link nav__link--footer"><span>News</span></a>
+                        <a href="#" class="nav__link nav__link--footer"><span>About</span></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-col--hours">
+                    <div class="footer__title footer__title--hours">
+                        Business Hours
+                    </div>
+
+                    <div class="footer__info">
+                        Even though mages also prefer to have a rest on Sunday, 
+                        our support team is available to help you 
+                        24 hours a day, 7 days a week!
+                    </div>
+
+                    <div class="footer__hours">
+                        <p class="footer__hours-row">Mon-Sat: 10.00 AM - 06.00 PM</p>
+                        <p class="footer__hours-row">Sun: 24/7 support available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="babelpolyfill.bundle.js"></script>

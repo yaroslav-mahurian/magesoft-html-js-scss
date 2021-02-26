@@ -41,6 +41,8 @@
 		"gulp-file-include": "^2.3.0",
 		"imask": "^6.0.5",
 		"isomorphic-fetch": "^2.2.1",
+		"lax.js": "^2.0.3",
+		"swiper": "^6.4.15",
 		"url-search-params-polyfill": "^8.1.0",
 		"wowjs": "^1.1.3"
 	}

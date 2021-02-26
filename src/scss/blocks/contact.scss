@@ -1,0 +1,133 @@
+.contact__subtitle {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 24px;
+    color: $blue;
+
+    text-align: center;
+
+    @media (max-width: 767px) {
+        font-weight: 300;
+        font-size: 17px;
+    }
+}
+
+.contact__title {
+    margin-top: 18px;
+
+    font-family: Hyundai Sans Head Office;
+    font-weight: 400;
+    font-size: 81px;
+    text-align: center;
+
+    @media (max-width: 999px) {
+        font-size: 70px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 50px;
+        margin-bottom: 35px;
+    }   
+
+    @media (max-width: 479px) {
+        font-size: 36px;
+    }
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+        align-items: center;
+    }
+}
+
+.contact-form-input-wrapper {
+    margin-top: 33px;
+    width: 324px;
+    position: relative;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: $blue;
+        border-radius: 50%;
+
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        z-index: 2;
+        transform: translate3d(0, -50%, 0);
+    }
+
+    &--notes {
+        display: flex;
+    }
+
+    @media (max-width: 767px) {
+        width: 240px;
+    }
+}
+
+.contact-form__input {
+    width: 100%;
+    padding: 5px 25px;
+    border: none;
+    border-bottom: 2px solid $blue;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 24px;
+    color: $white;
+
+    position: relative;
+
+    &::placeholder {
+        color: $white;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--file {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    
+
+    @media (max-width: 767px) {
+        font-size: 17px;
+        font-family: Hyundai Sans Head Office;
+        font-weight: 300;
+
+        &--notes {
+            min-height: 35px;
+        }
+    }
+}
+
+.input__file-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+
+    cursor: pointer;
+
+    & img {
+        width: 23px;
+    }
+}
