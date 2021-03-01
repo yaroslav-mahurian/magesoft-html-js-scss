@@ -357,6 +357,7 @@ export default class RoundAnim {
 
         /* Vline block elements */
         const vline = document.querySelector("#vline");
+        console.log("🚀 ~ file: roundAnim.js ~ line 360 ~ RoundAnim ~ init ~ vline", vline);
         const vlineRound = document.querySelector("#vlineRound");
         const vlineOffsetLeft = offset(vline).left;
         const vlineOffsetTop = offset(vline).top;
