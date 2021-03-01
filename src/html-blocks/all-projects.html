@@ -162,26 +162,26 @@
                     </div>
     
                     <div class="section__filter">
-                        <div class="section__filter-list">
+                        <div class="section__filter-list" data-section-filter-container>
 
-                            <div class="section__filter-list-all section__filter-list-all--all-projects section__filter-list-all--active">
+                            <div class="section__filter-list-all section__filter-list-all--all-projects section__filter-list-all--active" data-section-filter-el data-section-filter-el-all>
                                 <span class="section-filter-list-span--all-projects">Show all</span>
                             </div>
 
                             <div class="section__filter-list-el-wrapper">
-                                <div class="section__filter-list-el section__filter-list-el--all-projects">
+                                <div class="section__filter-list-el section__filter-list-el--all-projects" data-section-filter-el>
                                     <span class="section-filter-list-el-span--all-projects">SEO</span>
                                 </div>
-                                <div class="section__filter-list-el section__filter-list-el--all-projects">
+                                <div class="section__filter-list-el section__filter-list-el--all-projects" data-section-filter-el>
                                     <span class="section-filter-list-el-span--all-projects">Web Development</span>
                                 </div>
-                                <div class="section__filter-list-el section__filter-list-el--all-projects">
+                                <div class="section__filter-list-el section__filter-list-el--all-projects" data-section-filter-el>
                                     <span class="section-filter-list-el-span--all-projects">Marketing</span>
                                 </div>
-                                <div class="section__filter-list-el section__filter-list-el--all-projects">
+                                <div class="section__filter-list-el section__filter-list-el--all-projects" data-section-filter-el>
                                     <span class="section-filter-list-el-span--all-projects">E-commerce</span>
                                 </div>
-                                <div class="section__filter-list-el section__filter-list-el--all-projects">
+                                <div class="section__filter-list-el section__filter-list-el--all-projects" data-section-filter-el>
                                     <span class="section-filter-list-el-span--all-projects">Security</span>
                                 </div>
                             </div>
@@ -232,12 +232,12 @@
     
                 <div class="card-pages-wrapper">
                     <div class="card-pages">
-                        <ul class="card-pages__list">
-                            <li class="card-pages__list-el card-pages__list-el--active"><span>1</span></li>
-                            <li class="card-pages__list-el"><span>2</span></li>
-                            <li class="card-pages__list-el"><span>3</span></li>
-                            <li class="card-pages__list-el"><span>...</span></li>
-                            <li class="card-pages__list-el"><span>17</span></li>
+                        <ul class="card-pages__list" data-card-page-container>
+                            <li class="card-pages__list-el card-pages__list-el--active" data-card-page><span>1</span></li>
+                            <li class="card-pages__list-el" data-card-page><span>2</span></li>
+                            <li class="card-pages__list-el" data-card-page><span>3</span></li>
+                            <li class="card-pages__list-el" data-card-page><span>...</span></li>
+                            <li class="card-pages__list-el" data-card-page><span>17</span></li>
                         </ul>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
         </div>
     </section>
 
-    <script src="../babelpolyfill.bundle.js"></script>
-    <script src="../index.bundle.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/allProjects.js"></script>
 </body>
 </html>

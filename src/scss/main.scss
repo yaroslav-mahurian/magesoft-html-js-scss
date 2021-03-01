@@ -29,6 +29,12 @@ body {
         padding-right: $menu-padding;
     }
 
+
+    @media (max-width: 999px) {
+        padding-left: $menu-padding * 1.5;
+        padding-right: $menu-padding / 2;
+    }
+
     @media (max-width: 767px) {
         padding-left: $menu-padding / 2;
         padding-right: $menu-padding / 2;
@@ -111,6 +117,7 @@ body {
 @import "blocks/nav";
 @import "blocks/btn";
 @import "blocks/solutions";
+@import "blocks/round";
 @import "blocks/vline";
 @import "blocks/qualities";
 @import "blocks/tagline";

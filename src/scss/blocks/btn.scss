@@ -278,6 +278,15 @@
     }
 
     &--coop {
+        background-color: $white;
+        border-color: $black;
+        color: $black;
+
+        & span {
+            &:before, &:after {
+                background-color: $black;
+            }
+        }
         position: static;
         padding: 15px 70px;
 
@@ -287,13 +296,23 @@
     }
 
     &--coop-active {
-        background-color: $white;
+        /* background-color: $white;
         border-color: $black;
         color: $black;
 
         & span {
             &:before, &:after {
                 background-color: $black;
+            }
+        } */
+
+        background-color: $black;
+        border-color: transparent;
+        color: $white;
+
+        & span {
+            &:before, &:after {
+                background-color: $white;
             }
         }
     }
@@ -532,9 +551,9 @@
         }
 
         &--coop {
-            position: absolute;
+            position: static;
             
-            top: -20px;
+            top: 0;
             bottom: auto;
             left: 125px;
 
@@ -700,6 +719,7 @@
 
         &--coop {
             bottom: auto;
+            padding: 15px 50px;
         }
 
         &--notice {

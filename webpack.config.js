@@ -4,25 +4,29 @@ const path = require('path');
 module.exports = {
     // entry: './src/js/main.js',
     entry: {
-        babelpolyfill: '@babel/polyfill',
-        index: './src/js/main.js',
+        /* index: './src/js/main.js', */
+        main: [/* '@babel/polyfill', */ './src/js/main'],
+        index: [/* '@babel/polyfill', */ './src/js/index'],
+        allNews: [/* '@babel/polyfill', */ './src/js/allNews'],
+        allProjects: [/* '@babel/polyfill', */ './src/js/allProjects'],
     },
-    mode: 'development',
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].js',
+        library: '[name]',
     },
-    devServer: {
+    /* devServer: {
         contentBase: './dist',
         writeToDisk: true,
-    },
+    }, */
     plugins: [
         /* new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
         }), */
     ],
-    module: {
+    /* module: {
         rules: [
             {
                 test: /\.m?js$/,
@@ -36,5 +40,5 @@ module.exports = {
                 },
             },
         ],
-    },
+    }, */
 };

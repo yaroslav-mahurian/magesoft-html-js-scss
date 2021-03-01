@@ -149,7 +149,8 @@
         }
     }
 
-    &--active {
+
+    &--active, &:hover  {
         & span {
             &:before {
                 background-color: $blue;
@@ -168,7 +169,6 @@
     
     &--all-news {
      
-
         & span {
             border-right-color: $black;
         }

@@ -107,7 +107,7 @@ function scripts() {
 		.pipe(plumber())
 		.pipe(webpackstream(webpackconfig, webpack))
 		// folder only, filename is specified in webpack config
-		.pipe(gulp.dest("./dist/"))
+		.pipe(gulp.dest("./dist/js"))
 		.pipe(browsersync.stream())
 	);
   }

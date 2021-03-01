@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Magetoolkit</title>
@@ -28,7 +28,7 @@
     <!-- Menu wrapper -->
     <div class="menu-wrapper" id="menuWrapper">
         <div class="menu-wrapper__logo" id="menuWrapperLogo">
-            <a href="#intro" data-action-close-menu data-smooth-scroll><img class="menu-wrapper__logo-img" src="../img/logo-white-magesoft.png" alt="logo-magesoft"></a>
+            <a href="#intro" data-action-close-menu data-smooth-scroll><img class="menu-wrapper__logo-img" src="./img/logo-white-magesoft.png" alt="logo-magesoft"></a>
         </div>
 
         <button class="menu-wrapper__btn" data-action-close-menu></button>
@@ -214,6 +214,7 @@
             </div>
         </div>
     </section>
+
     <!-- Qualities -->
     <section class="qualities" data-block-color="black">
         <div class="container">
@@ -272,6 +273,7 @@
             </div>
         </div>
     </section>
+
     <!-- Tagline -->
     <section class="tagline" data-block-color="white">
         <div class="container">
@@ -327,12 +329,12 @@
 
             <div class="card-pages-wrapper">
                 <div class="card-pages">
-                    <ul class="card-pages__list">
-                        <li class="card-pages__list-el card-pages__list-el--active"><span>1</span></li>
-                        <li class="card-pages__list-el"><span>2</span></li>
-                        <li class="card-pages__list-el"><span>3</span></li>
-                        <li class="card-pages__list-el"><span>...</span></li>
-                        <li class="card-pages__list-el"><span>17</span></li>
+                    <ul class="card-pages__list " data-card-page-container-projects>
+                        <li class="card-pages__list-el card-pages__list-el--active" data-card-page-projects><span>1</span></li>
+                        <li class="card-pages__list-el" data-card-page-projects><span>2</span></li>
+                        <li class="card-pages__list-el" data-card-page-projects><span>3</span></li>
+                        <li class="card-pages__list-el" data-card-page-projects><span>...</span></li>
+                        <li class="card-pages__list-el" data-card-page-projects><span>17</span></li>
                     </ul>
                 </div>
             </div>
@@ -340,8 +342,8 @@
         <a href="./html-blocks/all-projects.html" class="btn btn--news btn--projects-main"><span>View all projects</span></a>
     </div>
 
-    <!-- Line coop -->
-    <div class="coop">
+    <!-- Сoop -->
+   <section class="coop">
         <div class="container">
             
             <div class="coop-header">
@@ -359,81 +361,72 @@
             <div class="coop-list">
 
                 <div class="coop-list__el" data-coop-anim-elem>
-                    <div class="coop-list__el-number"><span>1</span></div>
+                    <div class="coop-list__el-number">
+                        <span>1</span>
+                    </div>
                     <div class="coop-list__el-text">Receiving your 
                     requirements for the project
-                    </div>
-                    <div class="svg-coop svg-coop--odd">
-                        <svg width="268" height="138" viewBox="0 0 268 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 1C0 1 191.895 1 268 1" stroke="black" stroke-width="2"/>
-                            <path d="M267 0L267 138" stroke="black" stroke-width="2"/>
-                        </svg>
                     </div>
                     <div class="round round--coop" id="lineCoopRound"></div>
                 </div>
 
                 <div class="coop-list__el" data-coop-anim-elem>
-                    <div class="coop-list__el-number"><span>2</span></div>
+                    <div class="coop-list__el-number">
+                        <span>2</span>
+                    </div>
                     <div class="coop-list__el-text">Preparing a technical task with the estimate
                     </div>
-                    <div class="svg-coop svg-coop--even svg-coop--1279-offset">
-                        <svg width="174" height="151" viewBox="0 0 174 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 151L0.999999 0.999995" stroke="black" stroke-width="2"/>
-                            <path d="M0 1H174" stroke="black" stroke-width="2"/>
-                            </svg>
-                                    
-                    </div>
+                    
                 </div>
 
                 <div class="coop-list__el" data-coop-anim-elem>
-                    <div class="coop-list__el-number"><span>3</span></div>
+                    <div class="coop-list__el-number">
+                        <span>3</span>
+                    </div>
+                    
                     <div class="coop-list__el-text">Accepting the task and signing the contract
                     </div>
-                    <div class="svg-coop svg-coop--odd">
-                        <svg width="268" height="138" viewBox="0 0 268 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 1C0 1 191.895 1 268 1" stroke="black" stroke-width="2"/>
-                            <path d="M267 0L267 138" stroke="black" stroke-width="2"/>
-                        </svg>
-                    </div>
                 </div>
 
                 <div class="coop-list__el" data-coop-anim-elem>
-                    <div class="coop-list__el-number"><span>4</span></div>
-                    <div class="coop-list__el-text coop-list__el-text--coop-max-w">Completing the task (development & testing the software)
+                    <div class="coop-list__el-number">
+                        <span>4</span>
                     </div>
-                    <div class="svg-coop svg-coop--even">
-                        <svg width="174" height="151" viewBox="0 0 174 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 151L0.999999 0.999995" stroke="black" stroke-width="2"/>
-                            <path d="M0 1H174" stroke="black" stroke-width="2"/>
-                        </svg>                                
+                    
+                    <div class="coop-list__el-text coop-list__el-text--coop-text-hide">Completing the task <span>(development & testing the software)</span>
                     </div>
+                    
                 </div>
 
                 <div class="coop-list__el" data-coop-anim-elem>
-                    <div class="coop-list__el-number"><span>5</span></div>
+                    <div class="coop-list__el-number">
+                        <span>5</span>
+                    </div>
                     <div class="coop-list__el-text">Sending the completed project to you
                     </div>
-                    <div class="svg-coop svg-coop--odd">
-                        <svg width="292" height="120" viewBox="0 0 292 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M291 2L0.999985 1" stroke="black" stroke-width="2"/>
-                            <path d="M290 2L290 120" stroke="black" stroke-width="2"/>
-                            </svg>                                
-                    </div>
+                    
                 </div>
 
                 <div class="coop__btn-wrapper"><a href="#" class="btn btn--news btn--coop" data-link-contact data-coop-anim-elem><span>Let's start</span></a></div>
             </div>           
 
         </div>
-    </div>
+   </section>
 
+    <!-- News -->
     <section class="news">
             <div class="news__header">
-                <div class="container"><h2 class="section-title section-title--news">What’s New In The World Of IT?</h2></div>
-                
+                <div class="container">
+                    <h2 class="section-title section-title--news">
+                        What’s New In The World Of IT?
+                    </h2>
+                </div>
+                <div class="news-round-wrapper">
+                    <div class="round round--news-anim" id="newsRound"></div>
+                </div>
             </div>
-            <div class="news__content">
-                <div class="round-static round-static--news"></div>
+            <div class="news__content">    
+
                 <div class="container">
                     <div class="card-wrapper">
                         <div class="card card--projects">
@@ -472,12 +465,12 @@
         
                     <div class="card-pages-wrapper card-pages-wrapper--news">
                         <div class="card-pages">
-                            <ul class="card-pages__list">
-                                <li class="card-pages__list-el card-pages__list-el--active"><span>1</span></li>
-                                <li class="card-pages__list-el"><span>2</span></li>
-                                <li class="card-pages__list-el"><span>3</span></li>
-                                <li class="card-pages__list-el"><span>...</span></li>
-                                <li class="card-pages__list-el"><span>17</span></li>
+                            <ul class="card-pages__list" data-card-page-container-news>
+                                <li class="card-pages__list-el card-pages__list-el--active" data-card-page-news><span>1</span></li>
+                                <li class="card-pages__list-el" data-card-page-news><span>2</span></li>
+                                <li class="card-pages__list-el" data-card-page-news><span>3</span></li>
+                                <li class="card-pages__list-el" data-card-page-news><span>...</span></li>
+                                <li class="card-pages__list-el" data-card-page-news><span>17</span></li>
                             </ul>
                         </div>
                     </div>
@@ -488,8 +481,8 @@
         </div>
     </section>
 
+    <!-- Team -->
     <section class="team">
-        
         <div class="container">
             <h2 class="section-title section-title--team">Meet Our Experts</h2>
             <div class="team__subtitle">
@@ -569,11 +562,10 @@
                     <div class="team-slider-pagination-el"></div>
                 </div>
             </div>
-
         </div>
-
-        <div class="notice">
-            <div class="round-static round-static--notice"></div>
+        <div class="notice" id="noticeBlock">
+            <div class="notice__round-statiс" id="noticeRoundStatic"></div>   
+            <div class="round round--notice-anim" id="noticeRound"></div>
             <div class="notice-wrapper">
                 <h2 class="notice__title">Discover what`s possible.
                     Let`s talk.</h2>
@@ -582,6 +574,7 @@
         </div>
     </section>
 
+    <!-- Clients -->
     <section class="clients">
         <div class="container">
             <h2 class="section-title section-title--clients">
@@ -644,7 +637,7 @@
         </div>
     </section>
 
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="container container--footer">
             <div class="footer-wrapper">
@@ -730,10 +723,8 @@
         </div>
     </footer>
 
-
-    <script src="babelpolyfill.bundle.js"></script>
-    <script src="index.bundle.js"></script>
-    
+    <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 </html>

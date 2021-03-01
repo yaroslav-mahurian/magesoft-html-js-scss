@@ -3,8 +3,11 @@
     height: 581px;
     padding: 100px 36px 50px 74px;
 
+    color: $white;
     background-color: $black;
     border: 2px solid $white;
+
+
     position: absolute;
     top: -40%;
     left: calc(50% + 30px);
@@ -13,6 +16,26 @@
     transform: translate3d(0, 50%, 0);
 
     overflow: hidden;
+    transition: all .3s ease-out;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 45px;
+        
+        background-color: $white;
+
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 32px;
+        z-index: 1;
+
+        @media(max-width: 999px) {
+            display: none;
+        }
+    }
 
     @media (max-width: 1279px) {
         width: 394px;
@@ -63,6 +86,43 @@
         } 
         
     }
+
+    &--active {
+        background-color: $white;
+        border-color: $black;
+        color: $black;
+
+        .notice__round-statiс {
+            transition: border-color .3s ease-out;
+            border-color: $black;
+            
+            transform: scale(1.3, 1.3);
+        }
+
+        &:after {
+            transition: background-color .3s ease-out;
+            background-color: black;
+        }
+    }
+}
+
+.notice__round-statiс {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $white;
+    border-radius: 50%;
+    background-color: $blue;
+    
+    position: absolute;
+    top: 45px;
+    z-index: 4;
+    left: auto;
+    right: 15px;
+
+    @media(max-width: 999px) {
+        display: none;
+    }
 }
 
 .notice-wrapper {
@@ -79,10 +139,10 @@
     }
 }   
 
+
 .notice__title {
     margin-bottom: 30px;
 
-    color: $white;
     font-family: Hyundai Sans Head Office;
     font-weight: 400;
     font-size: 70px;

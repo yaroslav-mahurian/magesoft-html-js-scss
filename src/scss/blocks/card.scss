@@ -23,6 +23,12 @@
     }
 
     @media (max-width: 999px) {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 767px) {
         max-width: none;
         width: 100%;
         overflow: hidden;
